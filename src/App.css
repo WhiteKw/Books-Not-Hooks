@@ -1,38 +1,186 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-wrap {
+  border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-inner {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1042px;
+  height: 96px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header-inner > .header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-inner > .header-left > * {
+  display: inline-block;
+}
+
+.header-inner > .header-left > .header-logo {
+  color: #fb4760;
+}
+
+.header-inner > .header-left > .search-box-wrap {
+  position: relative;
+  width: 440px;
+  height: 48px;
+  margin-left: 64px;
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 440px;
+  height: 48px;
+  padding: 5px 12px 5px 14px;
+  box-sizing: border-box;
+  border: 2px solid #ebebeb;
+  border-radius: 4px;
+  transition: 0.25s;
+  background: #fff;
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box:hover {
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 20%);
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box.focus-on {
+  height: 500px;
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box > .search-box-input {
+  display: grid;
+  grid-template-columns: auto 24px;
+  position: relative;
+  height: 34px;
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box > .search-box-input::after {
+  content: " ";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background: #fb4760;
+  transition: 0.25s;
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box.focus-on > .search-box-input::after {
+  width: 100%;
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box > .search-box-input > input {
+  height: 100%;
+  border: none;
+}
+
+.header-inner > .header-left > .search-box-wrap > .search-box > .search-box-input > input:focus {
+  outline: none;
+}
+
+.header-inner > .header-menu {
+  display: flex;
+  justify-self: end;
+}
+
+.header-inner > .header-menu > li {
+  display: flex;
+  justify-content: center;
+  width: 90px;
+  height: 75px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.header-inner > .header-menu > li > .menu-inner {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+} 
+
+.header-inner > .header-menu > li  .menu-img {
+  width: 32px;
+  height: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.banner-wrap {
+  width: 100%;
+  height: 360px;
+  background: #f6f6f6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner-inner {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.banner-inner > .banner-left {
+
+}
+
+.banner-inner > .banner-right {
+  
+}
+
+.book-list-wrap {
+  margin-top: 118px;
+}
+
+.book-list-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.book-list-inner > .list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.book-list-inner > .list-header > .order-list > div {
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  color: #dfdfdf;
+}
+
+.book-list-inner > .list-header > .order-list > div.on {
+  color: #fb4760;
+}
+
+.book-list-inner > .list {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  margin: 0 -16px;
+}
+
+.book-list-inner > .list > .book-wrap {
+  margin: 0 16px 80px 16px;
+}
+
+.book-list-inner > .list > .book-wrap > .book-img {
+  aspect-ratio: 1 / 1.3358;
+  background: #dfdfdf;
+}
+
+.book-list-inner > .list > .book-wrap > .book-info {
+  padding: 13px 0;
 }
