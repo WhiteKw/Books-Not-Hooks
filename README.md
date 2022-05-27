@@ -2,5 +2,5 @@
 
 도서 소개 사이트입니다.
 
-FRONTEND : React
+FRONTEND : React  
 BACKEND  : Spring boot
