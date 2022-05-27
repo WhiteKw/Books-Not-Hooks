@@ -184,3 +184,27 @@
 .book-list-inner > .list > .book-wrap > .book-info {
   padding: 13px 0;
 }
+
+.book-list-inner > .list > .book-wrap > .book-info > .title {
+  width: 100%;
+  height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #222;
+}
+
+.book-list-inner > .list > .book-wrap > .book-info > .publisher {
+  line-height: 20px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #aaa;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -27,85 +27,85 @@ function BookList() {
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목dkhfasdjhfㅁㄴㅇㄹㄴㄹㄴㅁㄴㄹㅇㄴㄹㄹㄴㅍㅋㅌㅊㅋㅋㄶㅇㅎㅎㅎㄹㄴㅇ</div>
+                            <div className="publisher">출판사asfsdafsdafsdafsdafsasfafadsfasdfsd</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                     <div className="book-wrap">
                         <div className="book-img"></div>
                         <div className="book-info">
-                            <div>제목</div>
-                            <div>출판사</div>
+                            <div className="title">제목</div>
+                            <div className="publisher">출판사</div>
                         </div>
                     </div>
                 </div>

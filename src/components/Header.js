@@ -29,7 +29,7 @@ function Header() {
                     <li>
                         <div className="menu-inner">
                             <div className="menu-img" style={{background: "url('./images/ic-bag.svg')"}}></div>
-                            <div className="menu-name">장바구니</div>
+                            <div className="menu-name">북마크</div>
                         </div>
                     </li>
                     <li>
