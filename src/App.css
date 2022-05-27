@@ -11,7 +11,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1042px;
+  /* max-width: 1042px; */
+  max-width: 1200px;
   height: 96px;
   margin: 0 auto;
   padding: 0 16px;
