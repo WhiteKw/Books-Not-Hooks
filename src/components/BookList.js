@@ -1,6 +1,17 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function BookList() {
+
+    const bookArry = [
+        {id: "00001", title: "12가지 인생의 법칙", publisher: "메이븐", img: "http://image.kyobobook.co.kr/images/book/xlarge/694/x9791196067694.jpg"},
+        {id: "00002", title: "Clean Code(클린 코드)", publisher: "인사이트", img: "http://image.kyobobook.co.kr/images/book/xlarge/959/x9788966260959.jpg"},
+        {id: "00003", title: "면접을 위한 CS 전공지식 노트", publisher: "길벗", img: "http://image.kyobobook.co.kr/images/book/xlarge/529/x9791165219529.jpg"},
+        {id: "00004", title: "스파이 패밀리 1", publisher: "학산문화사", img: "http://image.kyobobook.co.kr/images/book/xlarge/560/x9791134838560.jpg"},
+        {id: "00005", title: "반도체, 넥스트 시나리오", publisher: "위즈덤하우스", img: "http://image.kyobobook.co.kr/images/book/xlarge/518/x9791168120518.jpg"},
+        {id: "00006", title: "셋업", publisher: "인스피레이션", img: "http://image.kyobobook.co.kr/images/book/xlarge/303/x9791195735303.jpg"},
+        {id: "00007", title: "당신이 알던 MBTI는 진짜 MBTI가 아니다", publisher: "인스피레이션", img: "http://image.kyobobook.co.kr/images/book/xlarge/023/x9791188929023.jpg"},
+    ]
     
     const [orderName, setOrderName] = useState();
 
@@ -24,90 +35,19 @@ function BookList() {
                     </div>
                 </div>
                 <div className="list">
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목dkhfasdjhfㅁㄴㅇㄹㄴㄹㄴㅁㄴㄹㅇㄴㄹㄹㄴㅍㅋㅌㅊㅋㅋㄶㅇㅎㅎㅎㄹㄴㅇ</div>
-                            <div className="publisher">출판사asfsdafsdafsdafsdafsasfafadsfasdfsd</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
-                    <div className="book-wrap">
-                        <div className="book-img"></div>
-                        <div className="book-info">
-                            <div className="title">제목</div>
-                            <div className="publisher">출판사</div>
-                        </div>
-                    </div>
+                    {bookArry.map((book, index) => {
+                        const url = `/book/${book.id}`
+                        return (
+                            <div className="book-wrap">
+                                <Link to={url} property={{title: book.title}}>
+                                    <div className="book-img"><img src={book.img} alt={book.title}/></div>
+                                </Link>
+                                <div className="book-info">
+                                    <div className="title">{book.title}</div>
+                                    <div className="publisher">{book.publisher}</div>
+                                </div>
+                            </div>
+                    )})}
                 </div>
             </div>
         </div>
