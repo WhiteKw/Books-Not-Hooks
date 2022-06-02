@@ -1,9 +1,10 @@
 import React from "react";
 
-function Book({match}) {
+function Book() {
+
     return (
         <div>
-            <h1>{match.params.id}</h1>
+            <h1></h1>
         </div>
     )
 }

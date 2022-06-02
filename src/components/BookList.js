@@ -11,6 +11,10 @@ function BookList() {
         {id: "00005", title: "반도체, 넥스트 시나리오", publisher: "위즈덤하우스", img: "http://image.kyobobook.co.kr/images/book/xlarge/518/x9791168120518.jpg"},
         {id: "00006", title: "셋업", publisher: "인스피레이션", img: "http://image.kyobobook.co.kr/images/book/xlarge/303/x9791195735303.jpg"},
         {id: "00007", title: "당신이 알던 MBTI는 진짜 MBTI가 아니다", publisher: "인스피레이션", img: "http://image.kyobobook.co.kr/images/book/xlarge/023/x9791188929023.jpg"},
+        {id: "00008", title: "아몬드", publisher: "창비", img: "http://image.kyobobook.co.kr/images/book/xlarge/267/x9788936434267.jpg"},
+        {id: "00009", title: "고블린 슬레이어 9", publisher: "디앤씨미디어", img: "http://image.kyobobook.co.kr/images/book/xlarge/548/x9791127850548.jpg"},
+        {id: "000010", title: "사피엔스", publisher: "김영사", img: "http://image.kyobobook.co.kr/images/book/xlarge/464/x9788934972464.jpg"},
+        {id: "000011", title: "경제기사 궁금증 300문 300답(2022)", publisher: "혜다", img: "http://image.kyobobook.co.kr/images/book/xlarge/139/x9791191183139.jpg"},
     ]
     
     const [orderName, setOrderName] = useState();
@@ -39,7 +43,12 @@ function BookList() {
                         const url = `/book/${book.id}`
                         return (
                             <div className="book-wrap">
-                                <Link to={url} property={{title: book.title}}>
+                                <Link to={{
+                                    pathname: url,
+                                    state: {
+                                        title: book.title
+                                    }
+                                }}>
                                     <div className="book-img"><img src={book.img} alt={book.title}/></div>
                                 </Link>
                                 <div className="book-info">

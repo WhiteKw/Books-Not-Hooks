@@ -122,24 +122,142 @@ body {
 
 .banner-wrap {
   width: 100%;
-  height: 360px;
   background: #f6f6f6;
 }
 
 .banner-inner {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  position: relative;
   max-width: 1200px;
-  height: 100%;
+  height: 360px;
   margin: 0 auto;
+  padding: 0;
 }
 
-.banner-inner > .banner-left {
+.banner-inner > .slider-wrap {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-inner .best-book {
+  display: grid !important;
+  grid-template-columns: 1fr 3fr;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-inner .best-book-index {
+  position: absolute;
+  left: 16px;
+  bottom: 38px;
+  width: 48px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 16px;
+  color: #fff;
+  background: rgba(0,0,0,.2);
+}
+
+.slick-slider.slick-initialized {
+  height: 100%;
+}
+
+.slick-slider.slick-initialized .slick-list {
+  height: 100%;
+}
+
+.slick-slider.slick-initialized .slick-list .slick-track {
+  display: flex;
+  height: 100%;
+}
+
+.slick-slider.slick-initialized .slick-list .slick-track .slick-slide > div {
+  height: 100%;
+}
+
+.slick-slider.slick-initialized .slick-prev {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  height: 48px;
+  transform: translate(-100%, -50%);
+  border: none;
+  color: transparent;
+  background: url('./images/ic-slide-prev.svg') no-repeat center;
+}
+
+.slick-slider.slick-initialized .slick-next {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  height: 48px;
+  transform: translate(100%, -50%);
+  border: none;
+  color: transparent;
+  background: url('./images/ic-slide-next.svg') no-repeat center;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.slick-dots li {
+  display: inline-block;
+}
+
+.slick-dots li button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 50%;
+  color: transparent;
+  background: #dfdfdf;
+}
+
+.slick-dots .slick-active button {
+  background: rgba(0,0,0,.3);
+}
+
+.banner-inner .banner-left {
 
 }
 
-.banner-inner > .banner-right {
-  
+.banner-inner .banner-left > div:first-child {
+  margin-top: 72px;
+  font-size: 16px;
+  color: #666;
+}
+
+.banner-inner .banner-left > div:last-child {
+  margin-top: 12px;
+  font-size: 32px;
+  color: #000;
+}
+
+.banner-inner .banner-right {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  align-items: center;
+  margin: 0 -7.5px;
+}
+
+.banner-inner .banner-right div {
+  margin: 0 7.5px;
+  aspect-ratio: 1 / 1.3358;
+  background: #dfdfdf;
+}
+
+.banner-inner .banner-right div > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .book-list-wrap {
@@ -222,6 +340,22 @@ body {
   overflow: hidden;
 }
 
+.slick-slide {
+  margin: 0 16px;
+}
+
+@media screen and (max-width: 1280px) {
+  .slick-slider.slick-initialized .slick-prev {
+    transform: translate(0, 0);
+    display: none !important;
+  }
+  
+  .slick-slider.slick-initialized .slick-next {
+    transform: translate(0, 0);
+    display: none !important;
+  }
+}
+
 @media screen and (max-width: 1028px) {
   .header-inner > .header-left > .search-box-wrap {
     display: none;
@@ -231,8 +365,9 @@ body {
 @media screen and (max-width: 768px) {
   .header-inner {
     height: 60px;
+    padding: 0 10px;
   }
-
+  
   .header-inner > .header-left > .header-logo {
     font-size: 20px;
   }
@@ -244,6 +379,51 @@ body {
 
   .header-inner > .header-menu > li .menu-name {
     display: none;
+  }
+
+  .banner-inner {
+    height: fit-content;
+    padding: 16px 0 36px 0;
+  }
+
+  .banner-inner .best-book {
+    display: block !important;
+    width: 100%;
+  }
+
+  .banner-inner .banner-left > div:first-child {
+    margin-top: 0;
+    font-size: 15px
+  }
+
+  .banner-inner .banner-left > div:last-child {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .banner-inner .best-book-index {
+    display: none;
+  }
+
+  .banner-inner .banner-right {
+    margin: 0 -3px;
+  }
+  
+  .banner-inner .banner-right div {
+    margin: 0 3px;
+  }
+
+  .slick-slide {
+    margin: 0 10px;
+  }
+
+  .book-list-wrap {
+    margin-top: 59px;
+  }
+
+  .book-list-wrap > .book-list-inner {
+    padding: 0 10px;
   }
 
   .book-list-inner > .list-header {
