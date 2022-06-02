@@ -52,6 +52,7 @@ body {
   border: 2px solid #ebebeb;
   border-radius: 4px;
   transition: 0.25s;
+  z-index: 2;
   background: #fff;
 }
 
@@ -374,6 +375,7 @@ body {
 
   .header-inner > .header-menu > li {
     width: fit-content;
+    height: 100%;
     margin-left: 10px;
   }
 
